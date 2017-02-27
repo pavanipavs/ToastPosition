@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="shreks.toast_message_alignment.MainActivity$PlaceholderFragment" >
+
+    <Button
+        android:id="@+id/btop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="51dp"
+        android:text="TOP"
+        android:onClick="showToast"/>
+
+    <Button
+        android:id="@+id/bcenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btop"
+        android:layout_below="@+id/btop"
+        android:layout_marginTop="20dp"
+        android:text="CENTER"
+        android:onClick="showToast" />
+
+    <Button
+        android:id="@+id/bbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bcenter"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/bcenter"
+        android:text="BOTTOM"
+        android:onClick="showToast" />
+
+    <Button
+        android:id="@+id/btop_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bcenter"
+        android:layout_alignBottom="@+id/bcenter"
+        android:layout_alignLeft="@+id/bbottom"
+        android:text="TOP RIGHT"
+        android:onClick="showToast" />
+
+    <Button
+        android:id="@+id/bcenter_withaxis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bcenter"
+        android:layout_centerVertical="true"
+        android:text="Center(100, 200)"
+        android:onClick="showToast"/>
+
+    <Button
+        android:id="@+id/bcenter_withaxis2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/bcenter_withaxis"
+        android:layout_below="@+id/bcenter_withaxis"
+        android:layout_marginTop="17dp"
+        android:onClick="showToast"
+        android:text="Center(100, -300)" />
+
+</RelativeLayout>
